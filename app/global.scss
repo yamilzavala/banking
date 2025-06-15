@@ -1,0 +1,520 @@
+// flex
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-left {
+    align-content: left;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-left {
+    justify-content: left;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+// gap - margins
+.gap-1 {
+    gap: 0.25rem; // 4px
+}
+
+.gap-2 {
+    gap: 0.5rem; // 2 * 0.25rem = 0.5rem
+}
+
+.gap-3 {
+    gap: 0.75rem;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.gap-6 {
+    gap: 1.5rem; // 6 * 0.25rem = 1.5rem
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem; // 2 * 0.25rem = 0.5rem
+}
+
+.mb-12 {
+    margin-bottom: 3rem; // 12 * 0.25rem = 3rem
+}
+
+.p-2 {
+    padding: 2rem; // 2 * 0.25rem = 0.5rem
+}
+
+.p-3 {
+    padding: 0.75rem; // 5 * 0.25rem
+}
+
+.p-4 {
+    padding: 1rem; // 5 * 0.25rem
+}
+
+.px-4 {
+    padding-left: 1rem; // 16px
+    padding-right: 1rem; // 16px
+}
+
+.px-6 {
+    padding-left: 1.5rem; // 16px
+    padding-right: 1.5rem; // 16px
+}
+
+.pt-2 {
+    padding-top: 0.5rem; // 64px
+}
+
+.pt-4 {
+    padding-top: 1rem; // 64px
+}
+
+.pt-6 {
+    padding-top: 1.5rem; // 64px
+}
+
+.pt-8 {
+    padding-top: 2rem; // 64px
+}
+
+.pt-12 {
+    padding-top: 3rem; // 64px
+}
+
+.pt-16 {
+    padding-top: 4rem; // 64px
+}
+
+.pb-8 {
+    padding-bottom: 2rem; // 64px
+}
+
+// headers
+.header-2 {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600; // font-semibold
+    color: #111827; // text-gray-900
+}
+
+// sizes
+.w-full {
+    width: 100%;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.h-16 {
+    height: 4rem; // 16 * 0.25rem
+}
+
+.size-6 {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.size-full {
+    width: 100%;
+    height: 100%;
+}
+
+.size-24 {
+    width: 24px;
+    height: 24px;
+
+    @media (max-width: 1280px) {
+        // max-xl breakpoint en Tailwind 
+        width: 3.5rem; // 14 * 0.25rem = 3.5rem
+        height: 3.5rem;
+    }
+}
+
+.h-full-minus-72 {
+    height: calc(100vh - 100px);
+}
+
+.h-120 {
+    height: 120px;
+}
+
+.w-355 {
+    width: 355px;
+}
+
+.max-w-60 {
+    max-width: 15rem;
+}
+
+.max-h-screen {
+    max-height: 100vh;
+}
+
+.max-xl-justify-center {
+    @media (max-width: 1280px) {
+      justify-content: center;
+    }
+}
+
+// fonts
+.font-inter {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-16 {
+    font-size: 16px;
+}
+
+.text-26 {
+    font-size: 26px;
+}
+
+.text-5xl {
+    font-size: 5rem;
+}
+
+.font-ibm-plex-serif {
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-black-1 {
+    color: #1a1a1a; // ajusta si usas otro tono específico
+}
+
+.text-blue-500 {
+    color: #3b82f6;
+}
+
+// links
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// colors
+.bg-bank-gradient {
+    background: linear-gradient(129deg,
+            rgba(7, 71, 182, 0.9) 0%,
+            rgba(34, 101, 216, 0.9) 33.33%,
+            rgba(47, 145, 250, 0.9) 66.67%,
+            rgba(34, 101, 216, 0.9) 100%);
+}
+
+// positions
+.relative {
+    position: relative;
+}
+
+// borders
+.border-l {
+    border-left-width: 1px;
+}
+
+.border-gray-200 {
+    border-color: #e5e7eb;
+}
+
+// icons
+.icon {
+    filter: brightness(0.3); // gris por defecto
+    transition: filter 0.2s ease-in-out;
+}
+
+.icon--active {
+    filter: brightness(0) invert(1); // se ve blanco
+}
+
+// shadows
+.shadow-creditCard {
+    box-shadow: 0px 4px 12px rgba(14, 30, 37, 0.12); // ajustalo si tenés un valor diferente
+}
+
+// Responsive classes
+@media (min-width: 640px) {
+    .sm\:p-8 {
+        padding: 2rem; // 8 * 0.25rem
+    }
+}
+
+// @media (max-width: 768px) {
+//     .md {
+//         display: none;
+//     }
+// }
+
+// customs
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+// overflows
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.no-scrollbar {
+    scrollbar-width: none;         // Firefox
+    -ms-overflow-style: none;      // IE 10+
+    &::-webkit-scrollbar {
+      display: none;               // Chrome, Safari
+    }
+  }
+
+  .xl-overflow-y-scroll {
+    @media (min-width: 1280px) {
+      overflow-y: scroll;
+    }
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  // backgrounds
+  .bg-gradient-mesh {
+    background-image: url('/icons/gradient-mesh.svg');
+  }
+ 
+  .bg-cover {
+    background-size: cover;
+  }
+  
+  .bg-no-repeat {
+    background-repeat: no-repeat;
+  }
+
+  // custom classes
+  .profile {
+    position: relative;
+    display: flex;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  
+    @media (max-width: 1280px) {
+      justify-content: center;
+    }
+  }
+
+  .profileImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    position: absolute;
+    top: -2rem;
+  
+    width: 6rem;
+    height: 6rem;
+  
+    border-radius: 9999px;
+  
+    background-color: #f3f4f6;
+  
+    border-width: 8px;
+    border-color: #ffffff;
+  
+    padding: 0.5rem;
+  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // ejemplo genérico
+  }
+
+  .profile-avatar-name {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 700;
+    color: #3b82f6;
+  }
+
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    padding-top: 6rem;
+  }
+
+  .profile-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .profile-email {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4b5563;
+  }
+
+  .banks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .banks-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* My Banks */
+  .my-banks {
+    display: flex;
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #fcfcfd; 
+    padding: 2rem;
+
+    @media (min-width: 1280px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+  }
+
+  /* My Banks */
+  .transactions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 100vh;
+    gap: 2rem;
+    overflow-y: scroll;
+    background-color: #fcfcfd; 
+    padding: 2rem;
+  
+    @media (min-width: 1280px) {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+
+  .transactions-header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+  }
+
+  .transactions-account {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-color: currentColor; // o ajustalo si usás un color específico
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-radius: 0.5rem;
+    background-color: #2563eb;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+  }
+
+  .transactions-account-balance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 0.375rem;
+    background-color: rgba(240, 248, 255, 0.2); // Ajusta si usás otro color en blue-25
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+  }
+
+  .add-bank-container {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .add-bank {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4b5563;
+  }
+
+  .cards-list {
+    position: relative;
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .first-card-list {
+    position: relative;
+    z-index: 10;
+  }
+
+  .second-card-list {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    width: 90%;
+    z-index: 0;
+  }
+
+  
+ 
+
+  
+
+  
+
+  
+ 

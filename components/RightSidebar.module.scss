@@ -1,0 +1,28 @@
+.right-sidebar {
+    // Ocultar scrollbars
+    scrollbar-width: none;               // Firefox
+    -ms-overflow-style: none;            // IE 10+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  
+    display: none !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    flex-direction: column !important;
+  
+    border-left-width: 1px !important;
+    border-color: #e5e7eb !important;
+  
+    width: 355px !important;
+  
+    @media (max-width: 768px) {
+      display: none;
+    }    
+    @media (min-width: 1280px) {
+      display: flex !important;
+      overflow-y: scroll !important;
+    }
+  }
+
+ 

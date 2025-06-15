@@ -1,0 +1,123 @@
+.container-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.bank-card {
+    position: relative;
+    display: flex;    
+    height: 190px;
+    width: 100%;
+    max-width: 320px;
+    justify-content: space-between;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    background: linear-gradient(135deg, #2f72ef, #809fdc); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
+}
+
+  .bank-card_content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 228px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    background-color: #374151; // fallback
+    background: linear-gradient(135deg, #2f72ef, #809fdc); // ejemplo bank gradient
+
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .bank-card_icon {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(135deg, #2f72ef, #809fdc); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Bank Info */
+  .bank-info {
+    display: flex;
+    gap: 18px;
+    padding: 1rem;
+    transition: all 0.2s ease-in-out;
+    border-width: 1px;
+    border-color: transparent;
+    background-color: #f0f9ff;
+  }
+
+  .icon-card {
+    margin-left: 2rem;
+  }
+
+  .account-name {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .account-balance {
+    color: #ffffff;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 900;
+  } 
+
+  .card-info-article-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;  
+  }
+
+  .card-info-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-info-h1 {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .card-info-h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .credit-card-number {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+  }
+
+  .lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+

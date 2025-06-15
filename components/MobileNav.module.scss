@@ -1,0 +1,16 @@
+.sidebar-logo {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 26px;
+    font-weight: 700; // font-bold
+    color: #111827; // text-black-1
+  
+    @media (min-width: 1536px) {
+      // 2xl
+      font-size: 26px;
+    }
+  
+    @media (max-width: 1280px) {
+      // max-xl
+      display: none;
+    }
+  }

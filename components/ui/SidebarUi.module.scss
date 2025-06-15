@@ -1,0 +1,40 @@
+.closeButtonContainer {
+    display: flex;
+    // justify-content: flex-end;
+}
+
+.closeButton {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.closeButton:hover {
+    background: #f0f0f0;
+}
+
+.hide-hamburger {
+    @media (min-width: 768px) {
+      display: none;
+    }    
+}
+
+.sidebar-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.sidebar-h1 {
+  font-size: 26px;
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 700;
+  color: #1a1a1a;
+}
