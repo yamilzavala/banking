@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import '@/app/global.scss'
 import { usePathname } from 'next/navigation'
-import styles from './Sidebar.module.scss'
+import styles from './SidebarLinks.module.scss'
 
 const SidebarLinks = () => {
   const pathname = usePathname();

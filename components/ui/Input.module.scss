@@ -1,0 +1,11 @@
+.input-class {
+    font-size: 16px;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    color: #111827;
+  
+    &::placeholder {
+      font-size: 14px;
+      color: #a4a7ab;
+    }
+  }

@@ -1,8 +1,10 @@
+import AuthForm from "@/components/AuthForm"
+import styles from "./page.module.scss"
 
 const SignUp = async () => {
   return (
-    <section className="flex-center size-full max-sm:px-6">
-      SignUp
+    <section className={styles.center}>
+      <AuthForm type="sign-up" />
     </section>
   )
 }

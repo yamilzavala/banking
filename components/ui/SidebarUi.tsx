@@ -20,8 +20,8 @@ interface SidebarProps {
 export const SidebarUiHeader = () => {
   return (
     <Link className={styles['sidebar-link']} href="/">           
-      <Image className={'size-24'} src="/icons/logo.svg" alt="Horizon Logo" width={25} height={25}/>
-      <h1 className={styles['sidebar-h1']}>Horizon</h1>  
+      <Image src="/icons/logo.svg" alt="MeliBank Logo" width={25} height={25}/>
+      <h1 className={styles['sidebar-h1']}>MeliBank</h1>  
     </Link>
   )
 }

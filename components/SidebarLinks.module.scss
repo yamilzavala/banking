@@ -1,0 +1,34 @@
+.sidebar-link {
+    display: flex;
+    gap: 0.75rem; // gap-3
+    align-items: center;
+    padding: 0.25rem 0; // py-1
+    border-radius: 0.5rem; // rounded-lg
+    justify-content: center;
+  
+    @media (min-width: 768px) {
+      // md
+      padding: 0.75rem; // p-3
+    }
+  
+    @media (min-width: 1280px) {
+      // xl
+      justify-content: flex-start;
+    }
+  
+    @media (min-width: 1536px) {
+      // 2xl
+      padding: 1rem; // p-4
+    }
+  }
+  
+  .sidebar-label {
+    font-size: 16px;
+    font-weight: 600; // font-semibold
+    color: #1F2937; // text-black-2
+  
+    @media (max-width: 1280px) {
+      // max-xl
+      display: none;
+    }
+  }

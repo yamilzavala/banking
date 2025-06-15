@@ -13,8 +13,8 @@ const Sidebar = ({user}: SiderbarProps) => {
       <nav className={styles['nav-container']}>
         {/* LOGO */}
         <Link className={styles['nav-link']} href="/">
-          <Image className={'size-24'} src="/icons/logo.svg" alt="Horizon Logo" width={34} height={34}/>
-          <h1 className={styles['sidebar-logo']}>Horizon</h1>
+          <Image src="/icons/logo.svg" alt="MeliBank Logo" width={34} height={34}/>
+          <h1 className={styles['sidebar-logo']}>MeliBank</h1>
         </Link>
         {/* LINKS */}
         <SidebarLinks/>
