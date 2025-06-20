@@ -5,6 +5,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import '@/app/global.scss'
 import SidebarLinks from './SidebarLinks'
+import { Button } from './ui/ButtonUi'
+import Footer from './Footer'
 
 const Sidebar = ({user}: SiderbarProps) => {
 
@@ -23,6 +25,7 @@ const Sidebar = ({user}: SiderbarProps) => {
       </nav>
 
       FOOTER
+      <Footer user={user}/>
     </section>
   )
 }

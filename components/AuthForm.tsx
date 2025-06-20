@@ -15,6 +15,7 @@ import { Button } from './ui/ButtonUi'
 import { authFormSchema } from '@/lib/utils'
 import Loader2 from './ui/Loader2'
 import { useRouter } from 'next/navigation'
+import { getLoggedInUser, signIn, signUp } from '@/lib/actions/user.actions'
  
 const AuthFormHeader = () => {
     return (
@@ -55,13 +56,13 @@ const AuthForm = ({type = 'sign-up'}: {type: string}) => {
         try {
            // Sign up with Appwrite & create a plain link token
            if(type === 'sign-up') {
-            // const newUser = await signUp(data)
-            // setUser(newUser);
+            const newUser = await signUp(data)
+            setUser(newUser);
            }
 
            if(type === 'sign-in') {
-            // const response = await signIn({email: data.email, password: data.password})
-            // if(response) router.push('/');
+            const response = await signIn({email: data.email, password: data.password})
+            if(response) router.push('/');
             
            }
         } catch (error) {

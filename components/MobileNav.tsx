@@ -10,7 +10,7 @@ const MobileNav = ({user}: MobileNavProps) => {
        <SidebarUi triggerLabel="Open">
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>         
           {/* Content */}
-          <SibarMobileLinks/>          
+          <SibarMobileLinks user={user}/>          
         </div>
       </SidebarUi>
     </section>

@@ -6,8 +6,9 @@ import '@/app/global.scss'
 import { usePathname } from 'next/navigation'
 import { SheetClose } from './ui/SheetUi'
 import styles from './SibarMobileLinks.module.scss'
+import Footer from './Footer'
 
-const SibarMobileLinks = () => {
+const SibarMobileLinks = ({user}: MobileNavProps) => {
   const pathname = usePathname();
   return (
     // <div className='flex h-full-minus-72 flex-col justify-between overflow-y-auto'>
@@ -30,7 +31,7 @@ const SibarMobileLinks = () => {
         </nav>
       </SheetClose>
 
-      FOOTER
+      <Footer user={user} type='mobile'/>
     </div>
   )
 }
