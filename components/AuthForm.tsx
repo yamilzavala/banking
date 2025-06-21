@@ -16,6 +16,7 @@ import { authFormSchema } from '@/lib/utils'
 import Loader2 from './ui/Loader2'
 import { useRouter } from 'next/navigation'
 import { getLoggedInUser, signIn, signUp } from '@/lib/actions/user.actions'
+import PlaidLink from './PlaidLink'
  
 const AuthFormHeader = () => {
     return (
@@ -44,7 +45,7 @@ const AuthForm = ({type = 'sign-up'}: {type: string}) => {
             address1: "",
             state: "",
             postalCode: "",
-            dataOfBirth: "",
+            dateOfBirth: "",
             ssn: "",
         },
     })
@@ -54,17 +55,32 @@ const AuthForm = ({type = 'sign-up'}: {type: string}) => {
         setLoading(true);
 
         try {
-           // Sign up with Appwrite & create a plain link token
-           if(type === 'sign-up') {
-            const newUser = await signUp(data)
-            setUser(newUser);
-           }
+            // Sign up with Appwrite & create a plain link token
 
-           if(type === 'sign-in') {
-            const response = await signIn({email: data.email, password: data.password})
-            if(response) router.push('/');
-            
-           }
+            if (type === 'sign-up') {
+                const userData = {
+                    firstName: data.firstName!,
+                    lastName: data.lastName!,
+                    address1: data.address1!,
+                    city: data.city!,
+                    state: data.state!,
+                    postalCode: data.postalCode!,
+                    dateOfBirth: data.dateOfBirth!,
+                    ssn: data.ssn!,
+                    email: data.email,
+                    password: data.password
+                  }
+        
+                  const newUser = await signUp(userData);
+
+                  setUser(newUser);
+            }
+
+            if (type === 'sign-in') {
+                const response = await signIn({ email: data.email, password: data.password })
+                if (response) router.push('/');
+
+            }
         } catch (error) {
             console.error('Error:', error);
         } finally {
@@ -99,7 +115,7 @@ const AuthForm = ({type = 'sign-up'}: {type: string}) => {
             {/* Content */}
             {user ? (
                 <div className={styles['auth-form-content']}>
-                    {/* PlaidLink */}
+                    <PlaidLink user={user} variant="primary"/>
                 </div>
             ) : (
                 <>
@@ -121,7 +137,7 @@ const AuthForm = ({type = 'sign-up'}: {type: string}) => {
                                 </div>
 
                                 <div className={styles['auth-form-content']}>
-                                    <CustomInput name="dataOfBirth" type="date" control={form.control} label="Date of Birth" placeholder="Ex: YYYY-MM-DD" />
+                                    <CustomInput name="dateOfBirth" type="date" control={form.control} label="Date of Birth" placeholder="Ex: YYYY-MM-DD" />
                                     <CustomInput name="ssn" type="text" control={form.control} label="SSN" placeholder="Ex: 123-45-6789" />
                                 </div>
                             </>
